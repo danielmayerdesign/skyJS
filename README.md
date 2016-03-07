@@ -1,5 +1,6 @@
 # skyJS
 A JavaScript plugin that turns your web page into a sky full of stars and galaxies.
+See it in action <a href="http://garden.danielmayer.net/stars" target="_blank">here.</a>
 
 ## How to use sky.js
 As of v0.1, there isn't much to this plugin, but there's more to come!
