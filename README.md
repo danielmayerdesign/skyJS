@@ -29,7 +29,7 @@ The second is an integer telling it how dense to make the sky. The default is `5
 
 ###`Sky` has 2 methods
 `.breathe()` initiates the zoom in/zoom out animation. It accepts one argument: an integer for the number of seconds each "breath" should take. The default is `10`.
-Calling `.breathe().stop()` will halt the animation.
+Calling `.breathe.stop()` will halt the animation.
 
 `.zoomIn()` initiates a zoom in. It accepts two arguments. The first is an integer for the duration of the zoom (the default is `2.5`). The second is an integer for the zoom amount.
 
@@ -44,7 +44,7 @@ So, if we want to create an animated sky, we can do the following:
 Maybe we want a quick zoom effect to happen when the user clicks on an element. In that case, we'd add the following to our above code:
 ```
 yourElement.onclick = function() {
-  sky.breathe().stop();
+  sky.breathe.stop();
   sky.zoomIn(1,3);
 };
 ```
