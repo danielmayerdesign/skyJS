@@ -45,6 +45,6 @@ Maybe we want a quick zoom effect to happen when the user clicks on an element. 
 ```
 yourElement.onclick = (function() {
   sky.breathe().stop();
-  sky.zoomIn(1);
+  sky.zoomIn(1,3);
 });
 ```
