@@ -122,17 +122,28 @@ var Sky = function Sky(layers, density) {
 	};
 
 	this.zoomIn = function zoomIn( speed, zoom ) {
-		speed = typeof speed === 'undefined' ? 2500 : speed * 1000;
+		window.onload = (function() {
+			speed = typeof speed === 'undefined' ? 2500 : speed * 1000;
 
-		for ( var i = 0; i < layerNodes.length; i++ ) {
-			var layer = layerNodes[i];
-			zoom = typeof zoom === 'undefined' ? layer.dataset.zoom * 2 : layer.dataset.zoom * (zoom/3);
+			for ( var i = 0; i < layerNodes.length; i++ ) {
+				var layer = layerNodes[i];
+				zoom = typeof zoom === 'undefined' ? layer.dataset.zoom * 2 : layer.dataset.zoom * (zoom/3);
 
-			layer.style.transition = "transform "+speed+"ms cubic-bezier(0.5,0,0.5,1)";
-			layer.style.transform = "translateZ(0.1px)"; // Rendering bug fix -- apparently an initial nonzero value is needed to jumpstart the rendering engine
+				layer.style.WebkitTransition = "-webkit-transform "+speed+"ms ease-in-out";
+				layer.style.MozTransition = "-moz-transform "+speed+"ms ease-in-out";
+				layer.style.MsTransition = "-ms-transform "+speed+"ms ease-in-out";
+				layer.style.OTransition = "-o-transform "+speed+"ms ease-in-out";
+				layer.style.transition = "transform "+speed+"ms ease-in-out";
 
-			layer.style.transform = "translateZ(" + zoom + "px)";
-		}
+				layer.style.WebkitTransform = "translateZ(0.1px)";
+				layer.style.MozTransform = "translateZ(0.1px)";
+				layer.style.MsTransform = "translateZ(0.1px)";
+				layer.style.OTransform = "translateZ(0.1px)";
+				layer.style.transform = "translateZ(0.1px)"; // Rendering bug fix -- apparently an initial nonzero value is needed to jumpstart the rendering engine
+
+				layer.style.transform = "translateZ(" + zoom + "px)";
+			}
+		});
 	};
 
 	for ( var i = 0; i < layerNodes.length; i++ ) {
