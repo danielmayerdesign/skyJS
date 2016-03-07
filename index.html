@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sky.js</title>
+	<meta charset="utf-8"/>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+	<style>
+		body {
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			color: #fff;
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			height: 100px;
+			line-height: 100px;
+			margin-top: -50px;
+			z-index: 100;
+			font-family: 'Montserrat';
+			font-weight: lighter;
+		    font-size: 1.8em;
+		    text-transform: uppercase;
+		    letter-spacing: 1em;
+		    opacity: 0.6;
+		}
+	</style>
+</head>
+<body>
+<h1>sky[js]</h1>
+
+<script type="text/javascript" src="sky.js"></script>
+<script type="text/javascript">
+
+	/** Sky( number_of_layers, density_from_1_to_10 ) **/
+
+	var sky = new Sky(5,3); // call a new instance of Sky and assign it to sky
+
+	sky.breathe(10);
+
+</script>
+</body>
+</html>
