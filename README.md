@@ -43,8 +43,8 @@ So, if we want to create an animated sky, we can do the following:
 
 Maybe we want a quick zoom effect to happen when the user clicks on an element. In that case, we'd add the following to our above code:
 ```
-yourElement.onclick = (function() {
+yourElement.onclick = function() {
   sky.breathe().stop();
   sky.zoomIn(1,3);
-});
+};
 ```
