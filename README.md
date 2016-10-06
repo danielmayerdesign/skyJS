@@ -24,14 +24,14 @@ Here, you're creating a new instance of `Sky` using the default parameters. Your
 Now we can have some fun.
 
 ###`Sky` takes 2 arguments
-The first is an integer telling it how many layers to create. The default is `3`.
-The second is an integer telling it how dense to make the sky. The default is `5`; `0` and `10` are the minimum and maximum values.
+The first is a number telling it how many layers to create. The default is `3`.
+The second is a number telling it how dense to make the sky. The default is `5`; `0` and `10` are the minimum and maximum values.
 
 ###`Sky` has 2 methods
-`.breathe()` initiates the zoom in/zoom out animation. It accepts one argument: an integer for the number of seconds each "breath" should take. The default is `10`.
+`.breathe()` initiates the zoom in/zoom out animation. It accepts one argument: a number for the number of seconds each "breath" should take. The default is `10`.
 Calling `.breathe.stop()` will halt the animation.
 
-`.zoomIn()` initiates a zoom in. It accepts two arguments. The first is an integer for the duration of the zoom (the default is `2.5`). The second is an integer for the zoom amount.
+`.zoomIn()` initiates a zoom in. It accepts two arguments. The first is a number for the duration of the zoom (the default is `2.5`). The second is a number for the zoom amount.
 
 So, if we want to create an animated sky, we can do the following:
 ```
